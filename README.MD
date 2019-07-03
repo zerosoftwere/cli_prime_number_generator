@@ -11,22 +11,32 @@ Command line prime number generator
 
 ## Build
 
-- `gradle build` compiles test and builds the jar file in *build/lid* directory
+- `gradle build` compiles, test and builds the jar file in *build/libs* directory
 
 ## Usage
 
-java Primes [strategy] &lt;start&gt; &lt;end&gt;
+`java Primes [strategy] &lt;start&gt; &lt;end&gt;`
+
 Example: `java prime --concurrent-divide 12 230`
+
 Start:
+
     -number greater than 1 less than max integer
 
 Stop:
+
     -number greater than start less than max integer
+
 Strategies:
+
     -td --test-divide        generates prime numbers using repeated divide
+
     -sv --sieve              generates prime numbers using sieve of eratosthenes
+
     -sd --sieve-divide       generates prime numbers using repeated prime division
+
     -cd --concurrent-divide  concurrent test-divide
+
     -cs --concurrent-sieve   concurrent sieve-divide
 
 ## Execute

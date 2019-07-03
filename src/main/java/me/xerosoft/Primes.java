@@ -4,7 +4,7 @@ import me.xerosoft.prime.*;
 
 import java.util.List;
 
-public class Main {
+public class Primes {
     public static void main(String... args) {
         if (args.length < 3 || args[0].equals("-h") || args[0].equals("--help")) {
             printUsage();
@@ -58,7 +58,7 @@ public class Main {
 
     public static void printUsage() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Usage java Prime [strategy] <start> <end>\n");
+        builder.append("Usage java Primes [strategy] <start> <end>\n");
         builder.append("Example: java prime --concurrent-divide 12 230\n");
         builder.append("Strategies:\n");
         builder.append("    -td --test-divide        generates prime numbers using repeated divide\n");

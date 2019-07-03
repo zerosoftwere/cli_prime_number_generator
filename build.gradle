@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'application'
 
 repositories {
     mavenCentral()
@@ -11,6 +12,17 @@ targetCompatibility = 1.8
 group = 'me.xerosoft'
 version = '0.0.1-SNAPSHOT'
 
+mainClassName = 'me.xerosoft.Primes'
+
 dependencies {
     testCompile('junit:junit:4.12')
+}
+
+jar {
+    manifest {
+        attributes (
+                'Main-Class': 'me.xerosoft.Primes'
+        )
+    }
+    archiveName = 'primes.jar'
 }

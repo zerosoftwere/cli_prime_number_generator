@@ -17,8 +17,6 @@ Command line prime number generator
 
 `java Primes [strategy] <start> <end>`
 
-Example: `java prime --concurrent-divide 12 230`
-
 Start:
 
     -number greater than 1 less than max integer
@@ -38,6 +36,8 @@ Strategies:
     -cd --concurrent-divide  concurrent test-divide
 
     -cs --concurrent-sieve   concurrent sieve-divide
+
+Example: `java prime --concurrent-divide 12 230`
 
 ## Execute
 

@@ -15,7 +15,7 @@ Command line prime number generator
 
 ## Usage
 
-`java Primes [strategy] &lt;start&gt; &lt;end&gt;`
+`java Primes [strategy] <start> <end>`
 
 Example: `java prime --concurrent-divide 12 230`
 

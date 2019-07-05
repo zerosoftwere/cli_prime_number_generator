@@ -38,15 +38,9 @@ public class Primes {
             case "-sv":
             case "--sieve":
                 return new SievePrimeNumberGenerator().generate(start, end);
-            case "-sd":
-            case "--sieve-divide":
-                return new SieveDividePrimeNumberGenerator().generate(start, end);
             case "-cd":
             case "--concurrent-divide":
-                return new ParallelTestDividePrimeNumberGenerator().generate(start, end);
-            case "-cs":
-            case "--concurrent-sieve":
-                return new ParallelSieveDividePrimeNumberGenerator().generate(start, end);
+                return new ConcurrentTestDividePrimeNumberGenerator().generate(start, end);
         }
         throw new IllegalArgumentException();
     }
@@ -63,9 +57,7 @@ public class Primes {
         builder.append("Strategies:\n");
         builder.append("    -td --test-divide        generates prime numbers using repeated divide\n");
         builder.append("    -sv --sieve              generates prime numbers using sieve of eratosthenes\n");
-        builder.append("    -sd --sieve-divide       generates prime numbers using repeated prime division\n");
         builder.append("    -cd --concurrent-divide  concurrent test-divide\n");
-        builder.append("    -cs --concurrent-sieve   concurrent sieve-divide\n");
         System.out.println(builder.toString());
     }
 }

@@ -31,11 +31,7 @@ Strategies:
 
     -sv --sieve              generates prime numbers using sieve of eratosthenes
 
-    -sd --sieve-divide       generates prime numbers using repeated prime division
-
     -cd --concurrent-divide  concurrent test-divide
-
-    -cs --concurrent-sieve   concurrent sieve-divide
 
 Example: `java prime --concurrent-divide 12 230`
 

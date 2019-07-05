@@ -4,12 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class ParallelSieveDividePrimeNumberGenerator extends SieveDividePrimeNumberGenerator {
+public class ConcurrentTestDividePrimeNumberGenerator extends TestDividePrimeNumberGenerator {
+
 
     @Override
     public List<Integer> generate(int start, int end) throws IndexOutOfBoundsException {
         if (start < 0) throw new IndexOutOfBoundsException();
-        else if (start < 2) start = 2;
+        else if (start < 2) { start = 2; }
 
         return IntStream.range(start, end)
                 .parallel()

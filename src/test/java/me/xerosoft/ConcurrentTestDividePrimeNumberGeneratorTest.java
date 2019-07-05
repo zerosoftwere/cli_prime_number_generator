@@ -1,16 +1,15 @@
 package me.xerosoft;
 
-import me.xerosoft.prime.ParallelTestDividePrimeNumberGenerator;
+import me.xerosoft.prime.ConcurrentTestDividePrimeNumberGenerator;
 import me.xerosoft.prime.PrimeNumberGenerator;
-import me.xerosoft.prime.SieveDividePrimeNumberGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class SieveDividePrimeNumberGeneratorTest {
-    PrimeNumberGenerator primeGenerator = new SieveDividePrimeNumberGenerator();
+public class ConcurrentTestDividePrimeNumberGeneratorTest {
+    PrimeNumberGenerator primeGenerator = new ConcurrentTestDividePrimeNumberGenerator();
 
     @Test
     public void testPrimeNumbersTo10() {
